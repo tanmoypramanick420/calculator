@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="calculator.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <form name = "f1" action="">
+    <div class="space">
+    <input type="text" class="button" name= "txt" value="               ">
+</div> 
+<div class="first">
+    <input type="button" class="num" value="1" onclick="document.f1.txt.value += 1">
+    <input type="button"class="num" value="2" onclick="document.f1.txt.value += 2">
+    <input type="button" class="num"value="3" onclick="document.f1.txt.value += 3">
+    <input type="button" class="num"value="/" onclick="document.f1.txt.value += '/'">
+</div>
+<div class="second">
+    <input type="button"class="num" value="4" onclick="document.f1.txt.value += 4">
+    <input type="button"class="num" value="5" onclick="document.f1.txt.value += 5">
+    <input type="button"class="num" value="6" onclick="document.f1.txt.value += 6">
+    <input type="button"class="num" value="*" onclick="document.f1.txt.value += '*'">
+</div>
+<div class="third">
+    <input type="button"class="num" value="7" onclick="document.f1.txt.value += 7">
+    <input type="button"class="num" value="8" onclick="document.f1.txt.value += 8">
+    <input type="button" class="num"value="9" onclick="document.f1.txt.value += 9">
+    <input type="button"class="num" value="+" onclick="document.f1.txt.value += '+'">
+</div>
+<div class="four">
+    <input type="reset"class="num" value="C" >
+    <input type="button"class="num" value="0" onclick="document.f1.txt.value += 0">
+    <input type="button" class="num"value="=" onclick="cal()">
+    <input type="button"class="num" value="-" onclick="document.f1.txt.value += '-'">
+</div>
+</form>
+
+</body>
+<script>
+    function cal() {
+      let val = document.f1.txt.value;
+      document.f1.txt.value = eval(val);
+    //   console.log(eval(val));
+    }
+  </script>
+</html>
